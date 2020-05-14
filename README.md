@@ -1,5 +1,7 @@
 # Recipe Book
 
+![schema](index.png "schema")
+
 ## Topics
 
 - database modeling.
