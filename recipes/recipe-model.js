@@ -24,6 +24,11 @@ function getShoppingList(recipe_id) {
         .select("ri.quantity", "ri.unit", "i.name");
 }
 
+/*
+SELECT * FROM steps as s
+WHERE s.recipe_id = 1
+ORDER BY s.step_number
+*/
 function getInstructions(recipe_id) {
     return db("steps as s")
         .select('s.step_number', 's.instructions')
