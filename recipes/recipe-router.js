@@ -23,6 +23,16 @@ router.get('/:id/shoppingList', (req, res) => {
             res.status(500).json({ message: 'Failed to get the shopping list.' });
         });
 });
+router.get('/:id/instructions', (req, res) => {
+    const { id } = req.params
+    Recipes.getInstructions(id)
+        .then(inst => {
+            res.json(inst);
+        })
+        .catch(err => {
+            res.status(500).json({ message: 'Failed to get the instructions.' });
+        });
+});
 
 
 module.exports = router;
